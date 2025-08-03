@@ -34,13 +34,13 @@ def build_model(input_shape=(224, 224, 3), num_classes=6, dropout_rate=0.3):
 
     return model
 
-def save_model(model, filepath='../models/fruit_model.keras'):
+def save_model(model, filepath='../models/fruit_model.h5'):
     """
     Saves the trained model to a file.
     """
     model.save(filepath)
 
-def load_trained_model(filepath='../models/fruit_model.keras'):
+def load_trained_model(filepath='../models/fruit_model.h5'):
     """
     Loads a previously saved model.
     """
