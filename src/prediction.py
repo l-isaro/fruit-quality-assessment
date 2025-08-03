@@ -12,6 +12,8 @@ from retrain_model import retrain_model
 # Load model
 @st.cache_resource
 def load_model():
+    current_dir = os.getcwd()
+    st.write(f"📁 Current working directory: {current_dir}")
     return tf.keras.models.load_model("../models/fruit_model.keras")
 
 model = load_model()
