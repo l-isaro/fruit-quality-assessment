@@ -11,3 +11,5 @@ uvicorn
 streamlit
 requests
 python-multipart
+pymongo
+python-dotenv
