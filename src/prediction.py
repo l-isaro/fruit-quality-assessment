@@ -14,6 +14,7 @@ from retrain_model import retrain_model
 def load_model():
     current_dir = os.getcwd()
     st.write(f"📁 Current working directory: {current_dir}")
+    st.write(os.listdir("../models"))
     return tf.keras.models.load_model("../models/fruit_model.keras")
 
 model = load_model()
@@ -47,7 +48,7 @@ with tab1:
 
     if uploaded_file:
         image = Image.open(uploaded_file).convert("RGB")
-        st.image(image, use_column_width=True)
+        st.image(image, use_container_width=True)
 
         img = image.resize((224, 224))
         img_array = np.array(img) / 255.0
