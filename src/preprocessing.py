@@ -1,7 +1,7 @@
 import os
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 
-def get_data_generators(data_dir, target_size=(224, 224), batch_size=32, validation_split=0.15):
+def get_data_generators(data_dir, target_size=(224, 224), batch_size=32, train_subfolder="train"):
     """
     Creates train, validation, and test data generators from a single directory structure.
     
@@ -15,7 +15,7 @@ def get_data_generators(data_dir, target_size=(224, 224), batch_size=32, validat
         train_generator, val_generator, test_generator
     """
     # Paths
-    train_dir = os.path.join(data_dir, 'train')
+    train_dir = os.path.join(data_dir, train_subfolder)
     val_dir = os.path.join(data_dir, 'validate')
     test_dir = os.path.join(data_dir, 'test')
 
