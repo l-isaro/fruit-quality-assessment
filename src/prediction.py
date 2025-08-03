@@ -6,8 +6,8 @@ import os
 from datetime import datetime
 import matplotlib.pyplot as plt
 
-from src.db import save_upload_metadata
-from src.retrain_model import retrain_model
+from db import save_upload_metadata
+from retrain_model import retrain_model
 
 
 # Load model
