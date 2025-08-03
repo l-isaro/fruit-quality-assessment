@@ -8,7 +8,7 @@ import io
 app = FastAPI()
 
 # Load model once
-model = tf.keras.models.load_model("models/fruit_model.h5")
+model = tf.keras.models.load_model("../models/fruit_model.h5")
 
 # Define class labels
 class_labels = [
