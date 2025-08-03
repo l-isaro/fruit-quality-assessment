@@ -1,11 +1,9 @@
-# src/retrain_model.py
-
 from tensorflow.keras.callbacks import EarlyStopping
 from model import build_model, save_model
 from preprocessing import get_data_generators
 import os
 
-def retrain_model(train_dir="../data/train", user_dir="../data/user_uploaded", model_path="../models/fruit_model.h5", epochs=5):
+def retrain_model(train_dir="../data/train", user_dir="../data/user_uploaded", model_path="../models/fruit_model.keras", epochs=5):
     """
     Retrains the model using data from both the original and user-uploaded datasets.
     """
