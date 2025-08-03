@@ -1,5 +1,3 @@
-# locustfile.py
-
 from locust import HttpUser, task, between
 import random
 import os
