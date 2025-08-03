@@ -7,14 +7,14 @@ This project automates fruit quality assessment using image classification and a
 ## 📽️ Demo Video
 
 Watch the full walkthrough here:  
-📺 [YouTube Video Demo](https://youtube.com/your-demo-link)
+📺 [YouTube Video Demo](https://youtu.be/PiiRm-EffjQ)
 
 ---
 
 ## 🌐 Live App
 
 🚀 Try the Streamlit Web App:  
-👉 [https://your-app-name.onrender.com](https://your-app-name.onrender.com)
+👉 [Deployed link](https://fruit-quality-assessment.onrender.com/)
 
 ---
 
@@ -36,11 +36,47 @@ This app uses a deep learning model (MobileNetV2) to automatically classify frui
 
 ---
 
-## ⚙️ Setup Instructions
+💪 Flood Request Simulation (Locust Load Test)
 
-### 📁 Clone and Install
+We used Locust to simulate load on the FastAPI /predict endpoint.
+
+<img width="1831" height="1125" alt="total_requests_per_second_1754245942 015" src="https://github.com/user-attachments/assets/b0c2605d-cd6f-4bc2-b784-9a373aed645c" />
+
+---
+
+## 🔧 Setup Instructions
+
+### 1. Clone the repo
 
 ```bash
-git clone https://github.com/your-username/fruit-quality-classifier.git
+git clone https://github.com/your-username/fruit-quality-classifier
 cd fruit-quality-classifier
+```
+
+---
+
+### 2. Create virtual environment
+
+```bash
+python -m venv venv
+source venv/bin/activate  # or venv\Scripts\activate on Windows
+```
+
+---
+
+### 3. Install requirements
+
+```bash
 pip install -r requirements.txt
+```
+
+---
+
+### 4. Add environment variables
+
+Create a `.env` file:
+
+```env
+MONGO_URI=your-mongodb-uri
+```
+
