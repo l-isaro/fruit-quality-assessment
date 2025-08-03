@@ -15,7 +15,7 @@ def load_model():
     current_dir = os.getcwd()
     st.write(f"📁 Current working directory: {current_dir}")
     st.write(os.listdir("/opt/render/project/"))
-    return tf.keras.models.load_model("../../models/fruit_model.keras")
+    return tf.keras.models.load_model("../models/fruit_model.keras")
 
 model = load_model()
 class_labels = [
