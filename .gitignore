@@ -27,11 +27,6 @@ env.bak/
 # PyCharm
 .idea/
 
-# Data
-data/
-*.csv
-*.zip
-
 # Streamlit cache
 .streamlit/
 
