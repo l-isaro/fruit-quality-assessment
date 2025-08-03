@@ -71,7 +71,7 @@ with tab2:
     )
 
     if uploaded_files and selected_class:
-        save_path = os.path.join("data", "user_uploaded", selected_class)
+        save_path = os.path.join("../data", "user_uploaded", selected_class)
         os.makedirs(save_path, exist_ok=True)
 
         for uploaded_file in uploaded_files:

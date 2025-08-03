@@ -5,13 +5,13 @@ from model import build_model, save_model
 from preprocessing import get_data_generators
 import os
 
-def retrain_model(train_dir="data/train", user_dir="data/user_uploaded", model_path="models/fruit_model.h5", epochs=5):
+def retrain_model(train_dir="../data/train", user_dir="../data/user_uploaded", model_path="../models/fruit_model.h5", epochs=5):
     """
     Retrains the model using data from both the original and user-uploaded datasets.
     """
     # Create a temporary merged training folder
     import shutil
-    merged_train_dir = "data/_combined_train"
+    merged_train_dir = "../data/_combined_train"
     if os.path.exists(merged_train_dir):
         shutil.rmtree(merged_train_dir)
     shutil.copytree(train_dir, merged_train_dir)
@@ -25,7 +25,7 @@ def retrain_model(train_dir="data/train", user_dir="data/user_uploaded", model_p
             shutil.copy(os.path.join(src, file), os.path.join(dst, file))
 
     # Load generators
-    train_gen, val_gen = get_data_generators("data", target_size=(224, 224), batch_size=32, train_subfolder="_combined_train")
+    train_gen, val_gen, test_gen = get_data_generators("../data", target_size=(224, 224), batch_size=32, train_subfolder="_combined_train")
 
     # Build and train model
     model = build_model(input_shape=(224, 224, 3), num_classes=len(train_gen.class_indices))
